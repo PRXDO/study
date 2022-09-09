@@ -12,30 +12,41 @@ function clearInput() {
 
 function convertertTemperatures() {
 
-    console.log(typeof(celsius));
-    var numCelsius = parseFloat(celsius);
-    
-    console.log(typeof(numCelsius));
-    
+    var fahrenheitTemp;
+    var kelvinTemp;
+    var celsiusTemp;
 
+        // Celsius -> Fahrenheit/Kelvin
+    if ((celsius != "") && (fahrenheit.value == "") && (kelvin.value == "")) {
 
-    if( (celsius != "" ) && (fahrenheit.value == null) && (kelvin.value == null)  ){
+        fahrenheitTemp = (1.8 * celsius.value) + 32;
+        kelvinTemp = (+celsius.value + +273.15);
 
-        var fahrenheitTemp;
-        var kelvinTemp;
+        fahrenheit.value = fahrenheitTemp.toFixed(2);
+        kelvin.value = kelvinTemp.toFixed(2);
 
-        fahrenheitTemp = 1.8*celsius.value + 32;
-        kelvinTemp = celsius + 273;
-
-        fahrenheit.value = fahrenheitTemp;
-        kelvin.value = kelvinTemp;
-
+        console.log(fahrenheitTemp)
         console.log(kelvinTemp)
-        console.log("1")
-    }else{
-        console.log("2")
+
+        // Fahrenheit -> Celsius/Kelvin
+    } else if ((fahrenheit != "") && (celsius.value == "") && (kelvin.value == "")) {
+
+        celsiusTemp = (fahrenheit.value - 32) / 1.8;
+        kelvinTemp = ((fahrenheit.value - 32) * 5 / 9) + 273.15;
+
+        celsius.value = celsiusTemp.toFixed(2);
+        kelvin.value = kelvinTemp.toFixed(2);
+
+
+        // Kelvin -> Celsius/Fahrenheit
+    } else if ((kelvin != "") && (celsius.value == "") && (fahrenheit.value == "")) {
+
+        celsiusTemp = kelvin.value - 273.15;
+        fahrenheitTemp = ((kelvin.value - 273.15) * 1.8) + 32;
+
+        celsius.value = celsiusTemp.toFixed(2);
+        fahrenheit.value = fahrenheitTemp.toFixed(2);
+
 
     }
-
 }
-

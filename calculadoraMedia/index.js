@@ -13,12 +13,6 @@ function media() {
 
     var media = (nota1 + nota2 + nota3 + nota4) / 4;
 
-    console.log(nota1);
-    console.log(nota2);
-    console.log(nota3);
-    console.log(nota4);
-    console.log(inputMedia.value);
-
     inputMedia.value = media.toFixed(2);
 
 }
