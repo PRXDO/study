@@ -1,0 +1,38 @@
+/* Limpando o estilo do HTML */
+* {
+    /* padding: 0; */
+    /* margin: 0; */
+    box-sizing: border-box;
+    outline: 0;
+    background-color: lightskyblue;
+}
+
+/* Header */
+
+header_Container{
+
+    /* height: 8vh; */
+    width: 100%;
+
+    font-size: 5rem;
+    text-align: center;
+
+
+    border: 1px solid black;
+
+    margin-bottom: 1rem;
+}
+
+/* Main */
+
+main-container{
+    /* display: block; */
+    grid-column: auto;
+    grid-template-columns: max-content;
+
+    border: 1px solid red;
+}
+
+input:last-child{
+    border: 15px;
+}

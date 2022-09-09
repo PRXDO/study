@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./index.js"></script>
+
+    <title>Conversor de Temperaturas</title>
+</head>
+<body>
+
+    <header>
+        <h1>Conversor de Temperatura</h1>
+    </header>
+
+    <main class="mainContainer">
+
+        <label for="">Temperatura em Celcius:</label>
+        <input type="text" id="inputCelsius">
+
+        <label for="">Temperatura em Fahrenheit:</label>
+        <input type="text" id="inputFahrenheit">
+
+        <label for="">Temperatura em Kelvin:</label>
+        <input type="text" id="inputKelvin">
+
+        <button id="btnClear" onclick="clearInput();">Limpar</button>
+
+        <button id="btnConvert" onclick="convertertTemperatures();">Converter</button>
+
+    </main>
+</body>
+</html>
